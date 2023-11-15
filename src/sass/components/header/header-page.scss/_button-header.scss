@@ -6,22 +6,13 @@
     width: 160px;
     height: 44px;
     color: var(--colorText-primary);
-    background-color: var(--colorText-secondary);
+    background-color: #8E6D3B;
     transform: scale(1);
     &:hover,
     &:focus {
         background-color: var(--bgc-btnHover);
         transform: scale(1.1);
     }
-    &::after {
-        content: '';
-        display: block;
-        width: 6px;
-        height: 10px;
-        margin-left: 12px;
-        background-image: url(../images/icons/Vector1.svg);
-      }
- 
     @include media-min (768px) {
         display: flex;
         cursor: pointer;
