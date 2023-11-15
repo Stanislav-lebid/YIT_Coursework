@@ -1,0 +1,36 @@
+@import './base/normalize';
+@import './base/reset';
+@import './utils/visually-hidden';
+@import './utils/variables';
+@import './utils/mixin';
+@import './utils/base';
+
+@import './components/infin-animation';
+@import './components/totop';
+
+@import './components/header/logo';
+@import './components/header/header-page.scss/header-page';
+@import './components/header/header-page.scss/button-menu';
+@import './components/header/header-page.scss/navigation';
+@import './components/header/header-page.scss/button-header';
+@import './components/header/mobile-menu/backdrop.is-hidden';
+@import './components/header/mobile-menu/backdrop';
+@import './components/header/mobile-menu/mobile-menu';
+@import './components/header/mobile-menu/button-mobile';
+@import './components/header/mobile-menu/navigation-mobile';
+
+@import './components/modal/backdrop';
+@import './components/modal/modal';
+@import './components/modal/modal-buy';
+@import './components/modal/modal-about';
+@import './components/modal/modal-location';
+@import './components/modal/modal-franchisel';
+
+@import './components/header-hero';
+@import './components/products';
+@import './components/about';
+@import './components/advantages';
+@import './components/gallery';
+@import './components/customer-reviews';
+@import './components/contacts';
+@import './components/footer';

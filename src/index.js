@@ -1,0 +1,13 @@
+import './js/_mobile-menu';
+import './js/_slick';
+import './js/_question';
+import './js/_totop';
+import './js/_scroll';
+import './js/_modal-buy';
+import './js/_modal-about';
+import './js/_modal-location';
+import './js/_modal-buy-mobile';
+import './js/_products-modal-milkshakes';
+import './js/_products-modal-coffe';
+import './js/_products-modal-cream';
+import './js/_modal-franchisel';

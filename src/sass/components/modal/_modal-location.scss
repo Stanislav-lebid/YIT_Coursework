@@ -1,0 +1,66 @@
+.modal-location {
+    
+
+    &__text {
+            display: block;
+            font-family: 'titan one';
+            font-size: 16px;
+            color: var(--colorText-primary);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    
+    
+        @media screen and (min-width: 768px) {
+            &__text {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+        }
+    
+    
+        &__map {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.47);
+            margin-bottom: 20px;
+    
+        }
+    
+        &__address-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+        }
+    
+    
+        &__address-item {
+            margin-bottom: 10px;
+        }
+    
+        &__address-item:last-child {
+            margin-bottom: 0;
+        }
+    
+    
+        &__address-link {
+            color: var(--colorText-accent);
+            text-decoration: none;
+            transition: color var(--default-transition);
+        }
+
+               
+    
+        &__address-link-span {
+            color: var(--colorText-other);
+            margin-right: 10px;
+        }
+
+                 &__address-link:hover,
+                 &__address-link:focus {
+                     color: var(--bgc-btnHoverAccent);
+                 }
+}
+
+

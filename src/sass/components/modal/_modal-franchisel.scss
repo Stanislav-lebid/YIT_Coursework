@@ -1,0 +1,239 @@
+.franchisel-backdrop {
+    background: rgba(190, 35, 35, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 6;
+    
+}
+
+.franchisel-container{
+    @include media-min(768px) {
+    padding: 0 16px;
+}
+    
+}
+.franchisel-backdrop.is-hidden{
+    pointer-events: none;
+    opacity: 0;
+}
+
+.franchisel-backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%);
+
+}
+.franchisel-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    height: 100%;
+    background-color: #ffa5ba;
+    padding: 32px 16px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    
+    @media screen and (min-width:768px){
+        width: 70%;
+        height: 90%;
+    }
+}
+
+.franchisel-button{
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    stroke: var(--colorText-primary);
+    cursor: pointer;
+    transition: stroke var(--default-transition), transform var(--default-transition);
+    background-color: #fff;
+    border: 1px solid #0000001a;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    &:hover,
+    &:focus {
+    stroke: var(--colorText-other);
+    transform: scale(1.1);
+}
+}
+
+.franchisel__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.franchisel__title--svg{
+    fill: #d41443;
+    width: 113px;
+    height: 25px;
+
+}
+
+.franchisel-list{
+    display: flex;
+    @media screen and (max-width:767px){
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (min-width:768px){
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+}
+
+.franchisel-item{
+    width: 256px;
+    height: auto;
+    border: 1px solid black;
+    cursor: pointer;
+    &:hover .franchisel-bgr, &:focus .franchisel-bgr{
+        transform: translateY(0);
+        transition: transform var(--default-transition), box-shadow var(--default-transition);
+        
+    }
+
+    @media screen and (min-width:768px){
+        width: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+        // width: 353px;
+    }
+
+    @media screen and (min-width:1200px){
+        width: calc((100% - 6 * 15px) / 3);
+        // width: 369px;
+    }
+}
+
+
+@media screen and (max-width:767px){
+    .franchisel-item:not(:last-child){
+        margin-bottom: 30px;
+    }
+}
+
+.franchisel__img{
+    height: 300px;
+}
+.franchisel-animation{
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.franchisel-bgr{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(101%);
+    background:  rgb(212 20 67 / 90%);
+    padding: 10px 15px;
+    transition: transform var(--default-transition);
+
+}
+
+.franchisel-link {
+    display: flex;
+    flex-direction: column;
+    transition: var(--default-transition);
+    
+
+
+    
+
+}
+
+.franchisel-bgr__text {
+    font-family: var(--fontFamaly-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--colorText-secondary);
+    
+    @media screen and (min-width:1200px){
+    
+    }
+}
+
+.franchisel-poster{
+    text-align: center;
+    padding: 16px 32px;
+}
+
+.franchisel-poster__title{
+font-family: var(--fontFamaly-secondary);
+font-weight: 500;
+font-size: 16px;
+line-height: 1.2;
+letter-spacing: 0.03em;
+color: var(--colorText-other);
+margin-bottom: 10px;
+
+}
+
+.franchisel-poster__text{
+    font-family: var(--fontFamaly-secondary);
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--colorText-accent);
+    margin-bottom: 16px;
+}
+
+
+// иконки соц-сетей///////
+.franchisel-list__messenger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.franchisel-item{
+    background: #fff;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 4px;
+}
+
+.franchisel-item__messenger + .franchisel-item__messenger{
+    margin-left: 12px;
+}
+
+
+
+.franchisel-link__messenger{
+    display: flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color var(--default-transition), transform var(--default-transition);
+    background-color: var(--color-icon);
+    transform: scale(1);
+    &:hover, &:focus{
+        background-color: var(--colorText-primary);
+        transform: scale(1.1);
+    }
+}
+.franchisel__svg{
+    width: 34px;
+    height: 34px;
+}
