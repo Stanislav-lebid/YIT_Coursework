@@ -402,11 +402,12 @@ margin-bottom: 7px;
 
 .hero-thumb__ice{
     position: absolute;
+    
     top: 83px;
     left: 36px;
     width: 346px;
     height: 344px;
-    background: #B38E5D;
+    background-image: url('../images/hero/coffee.jpg');
     border-radius: 50%;
 }
 @media screen and (min-width: 768px) {
@@ -422,7 +423,7 @@ margin-bottom: 7px;
     .hero-thumb__ice {
     width: 534px;
     height: 534px;
-    top: 54px;
+    top: 88px;
     left: 516px;
     right: 189px;
     }
