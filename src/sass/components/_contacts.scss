@@ -5,7 +5,6 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.86; 
-    
     @media screen and (min-width:768px) {
         font-size: 14px;
         padding-top: 30px;
@@ -17,18 +16,6 @@
      }
     
     color: var(--colorText-other);
-    background-image: 
-    linear-gradient(to bottom, var(--colorText-secondary) 22%, var(--bgc-primary) 22%);
-
-    @media screen and (min-width:768px) {
-        background-image: 
-    linear-gradient(to bottom, var(--colorText-secondary) 45%, var(--bgc-primary) 45%);
-    }
-
-    @media screen and (min-width:1200px) {
-        background-image: 
-    linear-gradient(to bottom, var(--colorText-secondary) 20%, var(--bgc-primary) 20%);
-    }
 
     &__button {
         margin: 0 auto;
@@ -55,7 +42,7 @@
 
         &:hover,
         &:focus {
-            background-color: var(--bgc-btnHoverAccent);
+            background-color: var(--hover-secondary);
             transform: scale(1.1);
         }
 
@@ -68,7 +55,7 @@
 
             &:hover,
             &:focus {
-                background-color: var(--bgc-btnHover);
+                background-color: #8e6d3b;
                 transform: scale(1.1);
             }
         }
@@ -101,7 +88,7 @@
     padding: 40px 32px;
     border-radius: 24px;
     background-color: var(--colorText-secondary);
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    box-shadow: 0px 8px 30px rgba(75, 54, 33, 0.1);
 
     @media screen and (min-width:768px) {
         flex-basis: calc((100% - 2 * 32px) / 3);
@@ -121,40 +108,6 @@
     }
     }
 
-        &__category {
-           display: inline-block;
-           text-transform: uppercase;
-           text-align: center;
-           letter-spacing: 0.04em;
-           line-height: 1.4;
-           height: 16px;
-
-           color: var(--colorText-secondary);
-           background-color: var(--bgc-other);
-           
-           padding: 0 25px;
-           border-radius: 4px;
-
-           margin-bottom: 20px;
-
-           @media screen and (min-width:768px) {
-            font-size: 16px;
-            line-height: 1.86;
-            height: 28px;
-            padding: 0 16px;
-            margin-bottom: 32px;
-        }
-
-              &--green-wide {
-                  background-color: var(--bgc-accent);
-                  padding: 0 28px;
-
-                  @media screen and (min-width:768px) {
-                    height: 28px;
-                    padding: 0 16px;
-                }
-           }
-    }
      
      &__caption {
         margin-bottom: 24px;
@@ -223,7 +176,7 @@
     }
 
     &__time {
-        color: var(--colorText-third);
+        color:var(--colorText-primary);
     }
 
     &__link {
