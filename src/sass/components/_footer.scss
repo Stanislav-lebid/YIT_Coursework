@@ -1,6 +1,6 @@
 //footer styles
 .footer {
-    background-color: var(--bgc-primary);
+    background-color: #2d2926;
 }
 
 .footer-section {
@@ -44,7 +44,7 @@
         margin-bottom: 12px;
     }
 
-    color: var(--colorText-third);
+    color: rgb(179, 142, 93);
 
     font-family: var(--fontFamaly-primary);
     font-weight: 400;
@@ -129,7 +129,7 @@
     height: 100%;
     border-radius: 50%;
     color: var(--colorText-secondary);
-    background-color: var(--color-icon);
+    background-color: #8e6d3b;
     transform: scale(1);
     
     transition: background-color var(--default-transition), transform var(--default-transition);
@@ -143,7 +143,7 @@
 
 .footer-tel {
     display: flex;
-    color: var(--colorText-other);
+    color: #fff;
     font-family: var(--fontFamaly-secondary);
     font-weight: 700;
     font-size: 12px;
