@@ -82,7 +82,8 @@ img {
 
 
   @media screen and (min-width: 768px) {
-    margin-top: 60px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     width: 100%;
   }
 
@@ -94,7 +95,6 @@ img {
 }
 
 .about-text {
-  margin-top: 40px;
   margin-right: 80px;
 
   width: 100%;
@@ -110,7 +110,6 @@ img {
   }
 
   @media screen and (min-width: 1200px) {
-    margin-top: 90px;
     max-width: 463px;
   }
 }
@@ -121,7 +120,7 @@ img {
   font-size: 12px;
   line-height: 1.58;
   color: var(--colorText-other);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -132,7 +131,7 @@ img {
     font-size: 16px;
     line-height: 1.75;
     letter-spacing: 0.04em;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 }
 
@@ -148,13 +147,14 @@ img {
     font-size: 14px;
     line-height: 1.78;
     letter-spacing: 0.04em;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.92;
     letter-spacing: 0.04em;
+    margin-bottom: 40px;
   }
 }
 
