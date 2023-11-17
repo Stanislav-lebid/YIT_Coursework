@@ -10,7 +10,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-family: var(--fontFamaly-primary);
-  color: var(--colorText-third);
+  color: #B38E5D;
 
   @media screen and (min-width: 1200px) {
     font-size: 30px;
@@ -48,15 +48,8 @@
   &__title-wrap {
     text-align: center;
 
-    margin-bottom: 162px;
+    margin-bottom: 48px;
 
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 281px;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      margin-bottom: 158px;
-    }
   }
 
   // products__item
@@ -65,7 +58,7 @@
     position: relative;
 
     flex-basis: 100%;
-    padding: 160px 53px 40px 53px;
+    padding: 40px 53px 40px 53px;
 
     border-radius: 24px;
 
@@ -77,14 +70,14 @@
 
     @media screen and (min-width: 1200px) {
       flex-basis: 50%;
-      padding: 165px 64px 60px 64px;
+      padding: 60px 64px 60px 64px;
       &:not(:last-child) {
         margin-right: 32px;
       }
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-      padding: 118px 25px 40px 25px;
+      padding: 40px 25px 40px 25px;
       flex-basis: 33, 333%;
       &:not(:last-child) {
         margin-right: 16px;
@@ -283,50 +276,6 @@
     transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: -140px;
-
-    display: block;
-    width: 100%;
-    height: 280px;
-
-    background-image: url(/src/images/products/M1.png);
-    background-size: 280px 280px;
-    background-repeat: no-repeat;
-
-    @include for-pixel-ratio-2 {
-      background-image: url(/src/images/products/M1@2x.png);
-    }
-
-    @media screen and (min-width: 1200px) {
-      height: 384px;
-
-      top: -261px;
-
-      background-image: url(/src/images/products/D1.png);
-      background-size: 368px 384px;
-
-      @include for-pixel-ratio-2 {
-        background-image: url(/src/images/products/D1@2x.png);
-      }
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      top: -138px;
-      height: 224px;
-
-      background-image: url(/src/images/products/T1.png);
-      background-size: 224px 224px;
-
-      @include for-pixel-ratio-2 {
-        background-image: url(/src/images/products/T1@2x.png);
-      }
-    }
-  }
-
   &:hover,
   &:focus {
     box-shadow: 0 15px 10px var(--hover-primary);
@@ -340,49 +289,6 @@
     transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: -140px;
-
-    display: block;
-    width: 100%;
-    height: 280px;
-
-    background-image: url(/src/images/products/M2.png);
-    background-size: 280px 280px;
-    background-repeat: no-repeat;
-
-    @include for-pixel-ratio-2 {
-      background-image: url(/src/images/products/M3@2x-1.png);
-    }
-
-    @media screen and (min-width: 1200px) {
-      height: 384px;
-
-      top: -261px;
-
-      background-image: url(/src/images/products/D2.png);
-      background-size: 368px 384px;
-
-      @include for-pixel-ratio-2 {
-        background-image: url(/src/images/products/D2@2x.png);
-      }
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      top: -138px;
-      height: 224px;
-
-      background-image: url(/src/images/products/T2.png);
-      background-size: 224px 224px;
-
-      @include for-pixel-ratio-2 {
-        background-image: url(/src/images/products/T2@2x.png);
-      }
-    }
-  }
 
   &:hover,
   &:focus {
@@ -397,49 +303,7 @@
     transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: -140px;
 
-    display: block;
-    width: 100%;
-    height: 280px;
-
-    background-image: url(/src/images/products/M3.png);
-    background-size: 280px 280px;
-    background-repeat: no-repeat;
-
-    @include for-pixel-ratio-2 {
-      background-image: url(/src/images/products/M2@2x-2.png);
-    }
-
-    @media screen and (min-width: 1200px) {
-      height: 384px;
-
-      top: -261px;
-
-      background-image: url(/src/images/products/D3.png);
-      background-size: 368px 384px;
-
-      @include for-pixel-ratio-2 {
-        background-image: url(/src/images/products/D3@2x.png);
-      }
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      top: -138px;
-      height: 224px;
-
-      background-image: url(/src/images/products/T3.png);
-      background-size: 224px 224px;
-
-      @include for-pixel-ratio-2 {
-        background-image: url(/src/images/products/T3@2x.png);
-      }
-    }
-  }
 
   &:hover,
   &:focus {
