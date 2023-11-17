@@ -1,6 +1,5 @@
 //advantages styles
 .advantages {
-background-color: var(--bgc-primary);
 &__list{
 display: block;
 justify-content: space-between;
@@ -51,10 +50,7 @@ line-height: 1.7;
 }
 &__title.icon::before {
  margin-bottom: 40px;   
- background-image: url(../images/advantages/icon1.png);
- @include for-pixel-ratio-2 {
-    background-image: url(../images/advantages/icon1@2x.png);
- }
+ background-image: url(../images/advantages/delivery.svg);
 }
 &__title.apples::before {
     content: '';
@@ -66,10 +62,7 @@ line-height: 1.7;
 
 &__title.apples::before {
     margin-bottom: 40px;
-    background-image: url(../images/advantages/apples-svgrepo.png);
-    @include for-pixel-ratio-2 {
-        background-image: url(../images/advantages/apples-svgrepo@2x.png);
-    }
+    background-image: url(../images/advantages/coffee-beans.svg);
 }
 &__title.heart::before {
     content: "";
@@ -81,9 +74,6 @@ line-height: 1.7;
 
 &__title.heart::before {
     margin-bottom: 40px;
-    background-image: url(../images/advantages/heart.png);
-    @include for-pixel-ratio-2 {
-        background-image: url(../images/advantages/heart@2x.png);
+    background-image: url(../images/advantages/country.svg);
     }
-}
 }
