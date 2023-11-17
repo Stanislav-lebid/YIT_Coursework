@@ -37,14 +37,6 @@
   transform var(--default-transition);
 }
 
-.button-arrow::after {
-  content: '';
-  display: block;
-  width: 6px;
-  height: 10px;
-  margin-left: 12px;
-  background-image: url(../images/icons/Vector1.svg); 
-}
 
 .button__icon {
   width: 6px;
