@@ -1,9 +1,4 @@
 .modal-about {
-
-    &__image {
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
     
         &__text {
             display: block;
@@ -130,7 +125,7 @@
 
                 &__info-text-link:hover,
                 &__info-text-link:focus {
-                 color: var(--bgc-btnHoverAccent);
+                 color: var(--colorText-primary);
 
                 }
 
