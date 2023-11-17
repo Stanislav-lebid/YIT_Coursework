@@ -3,6 +3,7 @@
 background-color: var(--bgc-primary);
 &__list{
 display: block;
+justify-content: space-between;
 @include media-min ($min-width: 768px) {
 display: flex;
 }

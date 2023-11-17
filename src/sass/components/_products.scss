@@ -197,7 +197,7 @@
 
     // products__modal-primary
     &-primary {
-      background-color: var(--hover-primary);
+      background-color: var(--hover-secondary);
     }
 
     // products__modal-secondary
@@ -209,7 +209,7 @@
     // products__modal-third
 
     &-third {
-      background-color: var(--hover-third);
+      background-color: var(--hover-secondary);
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
