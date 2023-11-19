@@ -1,18 +1,8 @@
-.franchisel-backdrop {
-    background: rgba(45, 41, 38, 0.75);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 6;
-    
-}
+
 
 .franchisel-container{
     @include media-min(768px) {
-    padding: 0 16px;
+    padding: 60px 24px;
 }
     
 }
