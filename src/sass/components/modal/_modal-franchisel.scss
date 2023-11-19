@@ -1,5 +1,5 @@
 .franchisel-backdrop {
-    background: rgba(190, 35, 35, 0.2);
+    background: rgba(45, 41, 38, 0.75);
     position: fixed;
     top: 0;
     left: 0;
@@ -33,8 +33,8 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     height: 100%;
-    background-color: #ffa5ba;
-    padding: 32px 16px;
+    background-color: #d4a24a;
+        padding: 32px 16px;
     overflow-y: scroll;
     border-radius: 10px;
     
@@ -143,7 +143,7 @@
     width: 100%;
     height: 100%;
     transform: translateY(101%);
-    background:  rgb(212 20 67 / 90%);
+    background:  rgb(232 192 134 / 80%);
     padding: 10px 15px;
     transition: transform var(--default-transition);
 
@@ -153,11 +153,6 @@
     display: flex;
     flex-direction: column;
     transition: var(--default-transition);
-    
-
-
-    
-
 }
 
 .franchisel-bgr__text {
