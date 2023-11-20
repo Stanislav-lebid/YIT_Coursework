@@ -40,7 +40,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.6);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 4px;
 
@@ -53,11 +53,10 @@
     z-index: 21;
     width: 260px;
     height: auto;
-    background-color: var(--bgc-modal);
+    background-color: #b38e5d;
     padding: 40px;
     border-radius: 8px;
-    border: 2px solid var(--color-icon);
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.5);
+    border: 2px solid #2d2926;
     
     position: absolute;
     top: 50%;
@@ -113,7 +112,7 @@
 
     &:hover,
     &:focus {
-        border: 2px solid var(--bgc-btnHoverAccent);
+        border: 2px solid #8e6d3b;
     }
 }
 // заголовок
@@ -166,6 +165,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
+            
         }
 // відкриваюча кнопка
         &-open {
@@ -192,17 +192,3 @@
     }
 }
 }
-
-
-
-
-
-
-
-
-// коментар
-
-// .visually-hidden {
-//     appearance: none;
-//     position: absolute;
-// }
