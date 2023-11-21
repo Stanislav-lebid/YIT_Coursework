@@ -6,6 +6,7 @@
     @include media-min(768px) {
     padding: 60px 24px;
 }
+
     
 }
 .franchisel-backdrop.is-hidden{
@@ -70,21 +71,22 @@
 
 
 .franchisel-list{
-    display: flex;
+    //display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
     @media screen and (max-width:767px){
         flex-direction: column;
-        align-items: center;
+        //align-items: center;
     }
     @media screen and (min-width:768px){
-        flex-wrap: wrap;
-        margin: -15px;
+        //flex-wrap: wrap;
+       // margin: -15px;
     }
 }
 
 .franchisel-item{
-    aspect-ratio: 3/4;
-    width: 256px;
-    height: auto;
+    //aspect-ratio: 3/4;
     border: 1px solid black;
     cursor: pointer;
     &:hover .franchisel-bgr, &:focus .franchisel-bgr{
@@ -94,21 +96,16 @@
     }
 
     @media screen and (min-width:768px){
-        width: calc((100% - 4 * 15px) / 2);
-        margin: 15px;
+        //width: calc((100% - 4 * 15px) / 2);
+        //margin: 15px;
     }
 
     @media screen and (min-width:1200px){
-        width: calc((100% - 6 * 15px) / 3);
+        //width: calc((100% - 6 * 15px) / 3);
     }
 }
 
 
-@media screen and (max-width:767px){
-    .franchisel-item:not(:last-child){
-        margin-bottom: 30px;
-    }
-}
 
 .franchisel__img {
     //height: 300px;
