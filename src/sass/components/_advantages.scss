@@ -30,7 +30,7 @@ letter-spacing: 0.04em;
 &__text {
 font-family: var(--fontFamaly-secondary);
 font-weight: 700;
-font-size: 12px;
+font-size: 14px;
 line-height: 1.7;
 @include media-min-max ($min-width: 768px, $max-width: 1199px) {
  font-size: 14px;  

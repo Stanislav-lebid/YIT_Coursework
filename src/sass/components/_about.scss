@@ -101,7 +101,6 @@ img {
 
   @media screen and (max-width: 767px) {
     margin-right: 0;
-    max-width: 220px;
   }
 
   @media screen and (min-width: 768px) {
@@ -117,7 +116,7 @@ img {
 .about-text__pre-info {
   font-family: var(--fontFamaly-secondary);
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.58;
   color: var(--colorText-other);
   margin-bottom: 20px;
@@ -138,7 +137,7 @@ img {
 .about-text__info {
   font-family: var(--fontFamaly-secondary);
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.58;
   color: var(--colorText-accent);
   margin-bottom: 20px;

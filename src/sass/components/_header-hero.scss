@@ -51,7 +51,7 @@
 .hero__title{
 font-family: var(--fontFamaly-primary);
 font-weight: 400;
-font-size: 26px;
+font-size: 30px;
 line-height: 1.153;
 letter-spacing: 0.04em;
 text-transform: uppercase;
@@ -110,12 +110,21 @@ color: #ffffff;
 
 .hero__list{
     display: flex;
+    @include media-max (767px) {
+        flex-direction: column;
+    }
 }
 .hero__item{
     display: flex;
 }
 .hero__item:last-child{
     margin-left: 8px;
+}
+@media screen and (max-width: 767px) {
+    .hero__item:last-child {
+    margin-top: 8px;
+    margin-left: 0;
+    }
 }
 @media screen and (min-width: 1200px) {
     .hero__item:last-child {
@@ -128,9 +137,9 @@ font-family: var(--fontFamaly-secondary);
 font-weight: 400;
 font-style: normal;
 border-radius: 20px;
-font-size: 8px;
+font-size: 12px;
 line-height: 1.25;
-height: 24px;
+//height: 24px;
 transition: background-color var(--default-transition), color var(--default-transition), transform var(--default-transition);
 transform: scale(1);
 
@@ -144,7 +153,7 @@ transform: scale(1);
 
 // крассная кнопка//////////////
 .hero__link--red{
-    width: 62.5px;
+    //width: 62.5px;
     background-color: var(--colorText-primary);
     color: var(--colorText-secondary);
     padding: 7px 15px;
@@ -163,7 +172,7 @@ transform: scale(1);
 
 // белая кнопка////////////
 .hero__link--white{
-width: 83px;
+//width: 83px;
 background-color: var(--colorText-secondary);
 color: var(--colorText-primary);
 padding: 7px 13px;
