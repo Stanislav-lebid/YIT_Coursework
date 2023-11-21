@@ -1,11 +1,8 @@
 /*infin-animation styles*/
 .icon-icecream {
-    position: fixed;
-    left: 10px;
-    bottom: 10px;
-    z-index: 19px;
-    width: 50px;
-    height: 50px;
+    display: block;
+    width: 100%;
+    height: 100%;
     
     cursor: pointer;
     animation: heartBeat;
@@ -168,13 +165,15 @@
             
         }
 // відкриваюча кнопка
-        &-open {
-            background-color: transparent;
-            border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+            &-open {
+                background-color: transparent;
+                border: none;
+                position: sticky;
+                bottom: 20px;
+                left: 20px;
+                width: 90px;
+                height: 90px;
+            }
 }
 // іконка
 &__icon {
