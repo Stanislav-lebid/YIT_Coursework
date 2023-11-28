@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openModalBtn: document.querySelector('[data-modal-mobile-buy-open]'),
     closeModalBtn: document.querySelector('[data-modal-mobile-buy-close]'),
     modal: document.querySelector('[data-modal-mobile-buy]'),
-    form: document.querySelector('.modal-buy__form-field'),
+    form: document.querySelector('.modal-buy__form-field-mobile'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
@@ -34,23 +34,42 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Перевірка вмісту FormData
     for (let [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
+      // console.log(${key}: ${value});
     }
   
     await postOrder(formData);
   }
 
   async function postOrder(formData) {
-    console.log(formData,'12')
     try {
       const response = await axios.post('http://13.38.72.193/save_order/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      console.log(response.data);
+      // console.log(response.status);
+
+      if (response.status === 201) {
+        toggleModal(); // Закриття модального вікна
+        showNotification('Ваше замовлення надіслано!'); // Показ сповіщення
+      }
     } catch (error) {
       console.error('There was an error!', error);
     }
+  }
+
+  function showNotification(message) {
+    // Створення елемента сповіщення
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+
+    // Додавання сповіщення до DOM
+    document.body.appendChild(notification);
+
+    // Автоматичне видалення сповіщення через деякий час
+    setTimeout(() => {
+      notification.remove();
+    }, 3000); // Змініть час за потребою
   }
 });

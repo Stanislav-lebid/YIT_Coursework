@@ -7,9 +7,9 @@
         </button>
         <div class="modal-inner modal-buy">
             <p class="modal-buy__text">Happy you are here</p>
-            <form class="modal-buy__form-field">
-                <label class="modal-buy__label" for="flavour-choose">Choose flavour you wish</label>
-                <input class="modal-buy__input" list="flavours" name="flavour" id="flavour-choose" placeholder="Choose flavour here" />
+            <form class="modal-buy__form-field-mobile">
+                <label class="modal-buy__label" for="flavour">Choose flavour you wish</label>
+                <input class="modal-buy__select" list="flavours" name="flavour" id="flavour" placeholder="Choose flavour here" />
                 <datalist id="flavours">
                     <option class="modal-buy__option">ARABICA</option>
                     <option class="modal-buy__option">ROBUSTA</option>
@@ -24,8 +24,8 @@
                     <option class="modal-buy__option">Large</option>
                 </select>
 
-                <label class="modal-buy__label" for="number">Select number</label>
-                <select class="modal-buy__select" id="number" name="number">
+                <label class="modal-buy__label" for="number">Select quantity</label>
+                <select class="modal-buy__select" id="number" name="amount">
                     <option class="modal-buy__option">1</option>
                     <option class="modal-buy__option">2</option>
                     <option class="modal-buy__option" selected>3</option>
@@ -38,7 +38,7 @@
 
                 <label class="modal-buy__label" for="tel-number">
                     Phone
-                    <input class="modal-buy__input" type="tel" name="tel" id="tel-number" placeholder="Enter your phone number" />
+                    <input class="modal-buy__input" type="tel" name="phone_number" id="tel-number" placeholder="Enter your phone number" />
                 </label>
 
                 <label class="modal-buy__label" for="email-enter">

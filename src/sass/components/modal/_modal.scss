@@ -22,7 +22,7 @@
     transition: transform 250ms cubic-bezier(.17, .67, .83, .67);
 
         &__close-button {
-                position: absolute;
+                position: fixed;
                 
                 display: flex;
                 justify-content: center;
