@@ -35,6 +35,9 @@ jobs:
           ssh -i ~/.ssh/id_rsa ${{ secrets.USER }}@${{ secrets.IP }} "
             cd /srv/projects/YIT_Coursework/
             git pull origin main
-            rm -rf .parcel-cache/ dist/
+            rm -rf node_modules
+            rm -rf .parcel-cache
+            rm -rf dist/
+            npm install
             npm run build -- --public-url /
           "
