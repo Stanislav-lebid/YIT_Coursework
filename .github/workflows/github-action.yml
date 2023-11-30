@@ -36,5 +36,5 @@ jobs:
             cd /srv/projects/YIT_Coursework/
             git pull origin main
             rm -rf .parcel-cache/ dist/
-            parcel build src/*.html --public-url /
+            npm run build -- --public-url /
           "
