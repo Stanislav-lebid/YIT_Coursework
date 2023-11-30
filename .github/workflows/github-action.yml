@@ -40,9 +40,10 @@ jobs:
             npm -v
             cd /srv/projects/YIT_Coursework/
             git pull origin main
-            rm -rf node_modules
-            rm -rf .parcel-cache
-            rm -rf dist/
-            npm install
-            npm run build -- --public-url /
+            sudo rm -rf node_modules
+            sudo rm -rf .parcel-cache
+            sudo rm -rf dist/
+            sudo npm install
+            sudo npm install -g parcel
+            parcel build src/*.html --public-url /
           "
