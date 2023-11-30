@@ -20,11 +20,6 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@master
 
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '21'
-
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh/
@@ -39,7 +34,8 @@ jobs:
         run: |
           cd ~/.ssh
           ssh -i id_rsa ubuntu@13.38.72.193 "
-            whoami
+            source ~/.nvm/nvm.sh  # Load nvm
+            nvm use 21  # Use the Node.js version you need
             node -v
             npm -v
             cd /srv/projects/YIT_Coursework/
