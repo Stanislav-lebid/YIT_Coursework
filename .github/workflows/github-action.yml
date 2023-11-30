@@ -32,20 +32,18 @@ jobs:
 
       - name: Enter AWS Lightsail via SSH & Deploy
         run: |
-          ssh -i ~/.ssh/id_rsa ${{ secrets.USER }}@${{ secrets.IP }} "
-            sudo su
+          cd ~/.ssh
+          ssh -i "id_rsa" ${{ secrets.USER }}@${{ secrets.IP }} "
+            whoami
             cd /srv/projects/YIT_Coursework/
             git pull origin main
             rm -rf node_modules
             rm -rf .parcel-cache
             rm -rf dist/
-            wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-            nvm use 21
+            nvm install 21
             node -v
             npm -v
+            npm install
             npm install -g parcel
-            parcel build src/*.html --public-url /
+            npm run build -- --public-url /
           "
