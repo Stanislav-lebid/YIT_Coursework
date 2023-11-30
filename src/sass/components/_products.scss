@@ -1,4 +1,4 @@
-//products styles
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -44,7 +44,7 @@
 }
 
 .products {
-  // .products__item
+
   &__title-wrap {
     text-align: center;
 
@@ -52,7 +52,7 @@
 
   }
 
-  // products__item
+
 
   &__item {
     position: relative;
@@ -85,7 +85,6 @@
     }
   }
 
-  // products__list
 
   &__list {
     display: flex;
@@ -100,7 +99,7 @@
     }
   }
 
-  // .products__title
+
 
   &__title {
     font-size: 20px;
@@ -117,7 +116,7 @@
     }
   }
 
-  // .products__text
+
 
   &__text {
     font-weight: 700;
@@ -140,7 +139,6 @@
     }
   }
 
-  // products__btn
 
   &__btn {
     display: flex;
@@ -156,7 +154,7 @@
       margin: 60px auto 0 auto;
     }
 
-    // products__btn-primary
+  
 
     &-primary:hover,
     &-primary:focus {
@@ -164,7 +162,7 @@
       scale: 1.1;
     }
 
-    // products__btn-secondary
+ 
 
     &-secondary:hover,
     &-secondary:focus {
@@ -172,7 +170,6 @@
       scale: 1.1;
     }
 
-    // products__btn-third
 
     &-third:hover,
     &-third:focus {
@@ -181,7 +178,7 @@
     }
   }
 
-  // products__modal
+
 
   &__modal {
     position: absolute;
@@ -195,18 +192,18 @@
     opacity: 1;
     transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    // products__modal-primary
+    
     &-primary {
       background-color: var(--hover-secondary);
     }
 
-    // products__modal-secondary
+  
 
     &-secondary {
       background-color: var(--hover-secondary);
     }
 
-    // products__modal-third
+
 
     &-third {
       background-color: var(--hover-secondary);
@@ -217,7 +214,7 @@
     }
   }
 
-  // products__cross
+
 
   &__cross {
     border-radius: 50%;
@@ -228,7 +225,7 @@
     color: var(--colorText-primary);
     cursor: pointer;
 
-    // products__cross-primary
+
 
     &-primary:hover,
     &-primary:focus {
@@ -236,7 +233,6 @@
 
     }
 
-    // products__cross-secondary
 
     &-secondary:hover,
     &-secondary:focus {
@@ -244,7 +240,6 @@
 
     }
 
-    // products__cross-third
 
     &-third:hover,
     &-third:focus {
