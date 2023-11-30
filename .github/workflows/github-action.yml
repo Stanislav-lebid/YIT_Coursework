@@ -34,15 +34,15 @@ jobs:
         run: |
           cd ~/.ssh
           ssh -i id_rsa ubuntu@13.38.72.193 "
+            sudo su
             whoami
-            ls -la
-            which -a node
+            node -v
+            npm -v
             cd /srv/projects/YIT_Coursework/
             git pull origin main
             rm -rf node_modules
             rm -rf .parcel-cache
             rm -rf dist/
-            node -v
-            npm -v
+            npm install
             npm run build -- --public-url /
           "
