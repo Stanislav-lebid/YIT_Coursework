@@ -9,14 +9,17 @@ on:
     branches:
       - main
       - master
+
 jobs:
   production:
     runs-on: ubuntu-latest
     environment:
       name: production
+
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@master
+
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh/
@@ -25,10 +28,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
           ssh-keyscan -H ${{ secrets.IP }} >> ~/.ssh/known_hosts
-      - name: enter aws lightsail via SSH & Deploy
+          cat ~/.ssh/known_hosts  # Debugging line to check the content of known_hosts
+
+      - name: Enter AWS Lightsail via SSH & Deploy
         run: |
-          cd ~/.ssh
-          ssh -i id_rsa ${{ secrets.USER }}@${{ secrets.IP }} "
+          ssh -i ~/.ssh/id_rsa ${{ secrets.USER }}@${{ secrets.IP }} "
             cd /srv/projects/YIT_Coursework/
             git pull origin main
             rm -rf .parcel-cache/ dist/
