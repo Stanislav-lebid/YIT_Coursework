@@ -33,7 +33,7 @@ jobs:
       - name: Enter AWS Lightsail via SSH & Deploy
         run: |
           cd ~/.ssh
-          ssh -i "id_rsa" ${{ secrets.USER }}@${{ secrets.IP }} "
+          ssh -i id_rsa ubuntu@13.38.72.193 "
             whoami
             cd /srv/projects/YIT_Coursework/
             git pull origin main
