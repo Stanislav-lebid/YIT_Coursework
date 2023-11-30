@@ -1,26 +1,34 @@
-name: Deploy to Server
+name: Deploy
 
 on:
   push:
     branches:
-      - main  # Adjust to your main branch name
-
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
 jobs:
-  deploy:
+  production:
     runs-on: ubuntu-latest
-
+    environment:
+      name: production
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Deploy to Server
+      - name: Checkout 🛎
+        uses: actions/checkout@master
+      - name: Setup SSH
         run: |
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY }} ${{ secrets.USER }}@${{ secrets.IP }} "
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PUBLIC_KEY }}" > ~/.ssh/id_rsa.pub
+          chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa.pub
+          ssh-keyscan -H ${{ secrets.IP }} >> ~/.ssh/known_hosts
+      - name: enter aws lightsail via SSH & Deploy
+        run: |
+          cd ~/.ssh
+          ssh -i id_rsa ${{ secrets.USER }}@${{ secrets.IP }} "
             cd /srv/projects/YIT_Coursework/
             git pull origin main
             rm -rf .parcel-cache/ dist/
