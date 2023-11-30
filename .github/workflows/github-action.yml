@@ -33,6 +33,7 @@ jobs:
       - name: Enter AWS Lightsail via SSH & Deploy
         run: |
           ssh -i ~/.ssh/id_rsa ${{ secrets.USER }}@${{ secrets.IP }} "
+            sudo su
             cd /srv/projects/YIT_Coursework/
             git pull origin main
             rm -rf node_modules
