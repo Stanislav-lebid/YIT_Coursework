@@ -20,6 +20,11 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@master
 
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '21'
+
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh/
@@ -37,11 +42,6 @@ jobs:
             whoami
             node -v
             npm -v
-            wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-            nvm install 21
             cd /srv/projects/YIT_Coursework/
             git pull origin main
             rm -rf node_modules
