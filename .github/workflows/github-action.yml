@@ -35,10 +35,10 @@ jobs:
           ssh -i ~/.ssh/id_rsa ${{ secrets.USER }}@${{ secrets.IP }} "
             cd /srv/projects/YIT_Coursework/
             git pull origin main
-            sudo apt-get install -y npm
             rm -rf node_modules
             rm -rf .parcel-cache
             rm -rf dist/
             npm install
-            npm run build -- --public-url /
+            npm i parcel
+            parcel build src/*.html --public-url /
           "
