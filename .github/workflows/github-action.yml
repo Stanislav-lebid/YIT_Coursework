@@ -38,6 +38,9 @@ jobs:
             rm -rf node_modules
             rm -rf .parcel-cache
             rm -rf dist/
+            nvm use 21
+            node -v
+            npm -v
             npm install
             npm i parcel
             parcel build src/*.html --public-url /
