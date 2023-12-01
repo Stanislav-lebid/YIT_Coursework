@@ -34,16 +34,16 @@ jobs:
         run: |
           cd ~/.ssh
           ssh -i id_rsa ubuntu@13.38.72.193 "
-            source ~/.nvm/nvm.sh  # Load nvm
-            nvm use 21  # Use the Node.js version you need
+            whoami
+            export PATH="/home/ubuntu/.local/bin:/home/ubuntu/.nvm/versions/node/v21.3.0/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$PATH"
+            nvm use 21
             node -v
             npm -v
             cd /srv/projects/YIT_Coursework/
             git pull origin main
-            sudo rm -rf node_modules
-            sudo rm -rf .parcel-cache
-            sudo rm -rf dist/
-            sudo npm install
-            sudo npm install -g parcel
+            rm -rf node_modules
+            rm -rf .parcel-cache
+            rm -rf dist/
+            npm install
             parcel build src/*.html --public-url /
           "
