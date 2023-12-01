@@ -35,18 +35,15 @@ jobs:
           cd ~/.ssh
           ssh -i id_rsa ubuntu@13.38.72.193 "
             whoami
+            export PATH="/home/ubuntu/.local/bin:/home/ubuntu/.nvm/versions/node/v21.3.0/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$PATH"
+            nvm use 21
             node -v
             npm -v
-            wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-            nvm install 21
             cd /srv/projects/YIT_Coursework/
             git pull origin main
             rm -rf node_modules
             rm -rf .parcel-cache
             rm -rf dist/
             npm install
-            npm run build -- --public-url /
+            parcel build src/*.html --public-url /
           "
