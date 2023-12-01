@@ -114,7 +114,7 @@
     left: 50%;
     max-width: 280px;
     width: 100%;
-    max-height: 70vh;
+    //max-height: 70vh;
     background-color: #8E6D3B;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
                     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -130,6 +130,6 @@
    
    @media screen and (min-width: 1200px) {
            max-width: 500px;
-           max-height: 80vh;
+           //max-height: 80vh;
     }
 }
