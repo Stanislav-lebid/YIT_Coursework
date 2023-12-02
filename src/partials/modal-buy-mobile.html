@@ -1,4 +1,4 @@
-<div class="backdrop is-hidden" data-modal-mobile-buy>
+<div class="backdrop is-hidden" data-modal-mobile-buy data-modal-buy>
     <div class="modal-mobile-buy">
         <button class="modal-list__close-button" type="button" aria-label="close-button" data-modal-mobile-buy-close>
             <svg class="modal__close-icon" width="11" height="11" aria-hidden="true">
@@ -9,12 +9,12 @@
             <p class="modal-buy__text">Happy you are here</p>
             <form class="modal-buy__form-field-mobile">
                 <label class="modal-buy__label" for="flavour">Choose flavour you wish</label>
-                <input class="modal-buy__select" list="flavours" name="flavour" id="flavour" placeholder="Choose flavour here" />
-                <datalist id="flavours">
-                    <option class="modal-buy__option">ARABICA</option>
-                    <option class="modal-buy__option">ROBUSTA</option>
-                    <option class="modal-buy__option">LIBERICA</option>
-                </datalist>
+                <select class="modal-buy__select" id="flavour-select" name="flavour">
+                  <option class="modal-buy__option" selected disabled>Choose flavour here</option>
+                  <option class="modal-buy__option">ARABICA</option>
+                  <option class="modal-buy__option">ROBUSTA</option>
+                  <option class="modal-buy__option">LIBERICA</option>
+              </select>
 
                 <label class="modal-buy__label" for="size">Select Size</label>
                 <select class="modal-buy__select" id="size" name="size">
@@ -25,25 +25,16 @@
                 </select>
 
                 <label class="modal-buy__label" for="number">Select quantity</label>
-                <select class="modal-buy__select" id="number" name="amount">
-                    <option class="modal-buy__option">1</option>
-                    <option class="modal-buy__option">2</option>
-                    <option class="modal-buy__option" selected>3</option>
-                    <option class="modal-buy__option">4</option>
-                    <option class="modal-buy__option">5</option>
-                    <option class="modal-buy__option">6</option>
-                    <option class="modal-buy__option">7</option>
-                    <option class="modal-buy__option">8</option>
-                </select>
+                <input class="modal-buy__quantity modal-buy__input" type="number" id="enter-quantity" name="amount" min="1" max="50" value="1" />
 
                 <label class="modal-buy__label" for="tel-number">
                     Phone
-                    <input class="modal-buy__input" type="tel" name="phone_number" id="tel-number" placeholder="Enter your phone number" />
+                    <input class="modal-buy__input" type="tel" name="phone_number" id="tel-number" placeholder="Enter your phone number" required />
                 </label>
 
                 <label class="modal-buy__label" for="email-enter">
                     Email
-                    <input class="modal-buy__input" type="email" name="email" id="email-enter" placeholder="Enter your Email" />
+                    <input class="modal-buy__input" type="email" name="email" id="email-enter" placeholder="Enter your Email" required />
                 </label>
 
                 <p class="modal-buy__inner-text">We will call you back<br>right after your order</p>
