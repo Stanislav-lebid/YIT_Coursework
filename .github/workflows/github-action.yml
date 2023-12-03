@@ -33,7 +33,7 @@ jobs:
       - name: Enter AWS Lightsail via SSH & Deploy
         run: |
           cd ~/.ssh
-          ssh -i id_rsa ubuntu@13.38.72.193 "
+          ssh -i id_rsa ${{secrets.USER}}@${{secrets.IP}} "
             whoami
             export PATH="/home/ubuntu/.local/bin:/home/ubuntu/.nvm/versions/node/v21.3.0/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$PATH"
             nvm use 21
