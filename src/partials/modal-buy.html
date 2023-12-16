@@ -9,13 +9,12 @@
             <p class="modal-buy__text">Happy you are here</p>
             <form class="modal-buy__form-field">
                 <label class="modal-buy__label" for="flavours-select">Choose flavour you wish</label>
-                <input class="modal-buy__input" list="flavours" name="flavour" id="flavours-select"
-                    placeholder="Choose flavour here"/>
-                <datalist>
+                <select class="modal-buy__select" id="flavour-select" name="flavour">
+                    <option class="modal-buy__option" selected disabled>Choose flavour here</option>
                     <option class="modal-buy__option">ARABICA</option>
                     <option class="modal-buy__option">ROBUSTA</option>
                     <option class="modal-buy__option">LIBERICA</option>
-                </datalist>
+                </select>
                 <label class="modal-buy__label" for="size-select">Select Size</label>
                 <select class="modal-buy__select" id="size-select" name="size">
                     <option class="modal-buy__option">Extra Small</option>
@@ -23,21 +22,15 @@
                     <option class="modal-buy__option" selected>Medium</option>
                     <option class="modal-buy__option">Large</option>
                 </select>
+
                 <label class="modal-buy__label" for="enter-quantity">Select quantity</label>
-                <select class="modal-buy__select" id="enter-quantity" name="amount">
-                    <option class="modal-buy__option">1</option>
-                    <option class="modal-buy__option">2</option>
-                    <option class="modal-buy__option" selected>3</option>
-                    <option class="modal-buy__option">4</option>
-                    <option class="modal-buy__option">5</option>
-                    <option class="modal-buy__option">6</option>
-                    <option class="modal-buy__option">7</option>
-                    <option class="modal-buy__option">8</option>
-                </select>
+                <input class="modal-buy__quantity" type="number" id="enter-quantity" name="amount" />
+
                 <label class="modal-buy__label" for="username-phone-number">
-                    Phone
-                    <input class="modal-buy__input" type="tel" name="phone_number" id="username-phone-number" placeholder="Enter your phone number"/>
+                  Phone
+                  <input class="modal-buy__input" type="tel" name="phone_number" id="username-phone-number" placeholder="Enter your phone number"/>
                 </label>
+
                 <label class="modal-buy__label" for="username-email">
                     Email
                     <input class="modal-buy__input" type="email" name="email" id="username-email" placeholder="Enter your Email" />

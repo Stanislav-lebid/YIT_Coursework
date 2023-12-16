@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     form: document.querySelector('.modal-buy__form-field-mobile'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-  refs.form.addEventListener('submit', handleFormSubmit);
+  refs.openModalBtn?.addEventListener('click', toggleModal);
+  refs.closeModalBtn?.addEventListener('click', toggleModal);
+  refs.form?.addEventListener('submit', handleFormSubmit);
 
   function toggleModal() {
     document.body.classList.toggle("modal-open");
@@ -20,23 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
   async function handleFormSubmit(event) {
     event.preventDefault();
     const formData = new FormData();
-  
+
     // Збір даних з input та select елементів
     const inputs = refs.form.querySelectorAll('.modal-buy__input');
     inputs.forEach(input => {
       formData.append(input.name, input.value);
     });
-  
+
     const selects = refs.form.querySelectorAll('.modal-buy__select');
     selects.forEach(select => {
       formData.append(select.name, select.value);
     });
-  
+
     // Перевірка вмісту FormData
     for (let [key, value] of formData.entries()) {
       // console.log(${key}: ${value});
     }
-  
+
     await postOrder(formData);
   }
 
@@ -72,4 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
       notification.remove();
     }, 3000); // Змініть час за потребою
   }
+
+  const initPhoneMask = () => {
+    const element = document.getElementById('tel-number');
+    const maskOptions = {
+      mask: '+{38\\0}(00)00-00-000'
+    };
+    new IMask(element, maskOptions);
+  }
+
+  initPhoneMask();
 });
